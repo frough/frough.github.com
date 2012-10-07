@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fiona Rough</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+    <style type="text/css" media="screen">.cell{float:left;margin-right:12px !important;}.cell.edge {margin-right: 0px !important;} .centered, .cell.centered {float: none; margin-left: auto !important; margin-right: auto !important;} .w798.g5 .span1 {width: 150px}.w798.g5 .span2 {width: 300px}.w798.g5 .span3 {width: 450px}.w798.g5 .span4 {width: 600px}.w798.g5 .span5 {width: 798px;}</style>
+    <style>
+    body {
+      font-size: 12px;
+      line-height: 1.5em;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #888;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    a#email {
+      color: #888;
+    }
+    a:hover#email {
+      color: #222;
+    }
+    #header {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    #info {
+      height: 432px;
+      position: relative;
+    }
+    #info  h2 {
+      text-transform: uppercase;
+      line-height: 22px;
+      color: #000;
+      border: 1px solid #8D8B8B;
+      border-width: 1px 0 1px 0;
+    }
+    #info  h2, #info  p, #work #worktitle {
+      text-align: right;
+    }
+    #info p {
+      margin: 10px 0;
+    }
+    #display {
+      border: 1px solid #8D8B8B;
+      border-width: 1px 0px 1px 0px;
+      position: relative;
+      padding-bottom: 23px;
+      height: 420px;
+    }
+    #image-list li h2, #image-list li p, #image-list li div {
+      display: none;
+    }
+    #display .image-list li, #display .image-list li img {
+      width: 600px;
+      height: 405px;
+    }
+    #display-nav {
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 10px;
+      margin-bottom: 50px;
+    }
+    #display, #display-nav span {
+      cursor: pointer;
+    }
+    #display-nav span.hover {
+      color: #000 !important;
+    }
+    #logo {
+      position: relative;
+      left: 12px;
+    }
+    .space {
+      margin-bottom: 12px;
+    }
+    </style>
+    <script src="jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.cycle.lite.1.0.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript" charset="utf-8">
+    $(function() {
+      $("#display-nav span").bind('mouseover mouseout', function() {
+        $(this).toggleClass('hover');
+      });
+      $("#display").bind('mouseover mouseout', function() {
+        $("#next").toggleClass("hover");
+        $(this).toggleClass("hover");
+      });
+      $("#image-list").cycle({
+        timeout: 0, next: '#next, #display', prev: '#prev', 
+        after: function() {
+          $("#worktitle").html($("h2", this).html());
+          $("#workdescription").html($("div", this).html());
+        }
+      });
+    });
+    </script>
+  </head>
+
+  <body class="fionarough home w798 g5">
+    <div class="cell span5 centered">
+      <div id="header" class="cell span5 centered"><img id="logo" src="images/logo.jpg" /></div>
+      <div id="info" class="cell span1">
+        <h2>About</h2>
+        <p class="space">I'm a graphic designer working in Vancouver, BC.<br />
+        I've produced print, web and multimedia solutions in-house for businesses in the communications, special event, and publishing industries.</p>
+        <h2>Contact</h2>
+        <p>778.960.5696 <br /><a id="email" href="mailto:info@fionarough.com">info@fionarough.com</a></p>
+        <div id="work">
+          <h2 class="title">Work</h2>
+          <div id="workdescription">Description</div>
+        </div>
+      </div>
+      <div class="cell span4 edge">
+        <div id="display" class="cell span4 edge" >
+          <ul id="image-list">
+            <li>
+              <img src="images/hijinx.jpg" />
+              <h2>Hijinx</h2>
+              <div>
+                <p>Hijinx Typeface</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/owl.jpg" />
+              <h2>Hijinx</h2>
+              <div>
+                <p>Little Owl Website</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/voice.jpg" />
+              <h2>Hijinx</h2>
+              <div>
+                <p>Voice Actor Website</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/buzzer.jpg" />
+              <h2>Buzzer</h2>
+              <div>
+                <p>Buzzer Redesign</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/chair.jpg" />
+              <h2>Chair</h2>
+              <div>
+                <p>Chair Illustration<br />
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="images/deer.jpg" />
+              <h2>Deer</h2>
+              <div>
+                <p>Illustrator Exercise<br />
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="images/flipbook.jpg" />
+              <h2>Flipbook</h2>
+              <div>
+                <p>Pocket Handbook<br />
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="images/lion_king.jpg" />
+              <h2>Lion King</h2>
+              <div>
+                <p>Fantasy Photograph</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/menu.jpg" />
+              <h2>Menu</h2>
+              <div>
+                <p>Diner Menu</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/newsletter.jpg" />
+              <h2>Newsletter</h2>
+              <div>
+                <p>E-Newsletter<br />
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="images/norsat_cd.jpg" />
+              <h2>Norsat CD</h2>
+              <div>
+                <p>Interactive CD<br />
+                </p>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <p id="display-nav" class="cell span4 edge"><span id="prev" href="#">Previous</span> | <span id="next" href="#">Next</span></p>
+      </div>
+    </div>
+  </body>
+</html>
